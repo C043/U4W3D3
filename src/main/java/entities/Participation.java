@@ -20,6 +20,7 @@ public class Participation {
     private Event event;
 
     @Column(name = "stato_conferma")
+    @Enumerated(EnumType.STRING)
     private ParticipationState state;
 
     public Participation() {

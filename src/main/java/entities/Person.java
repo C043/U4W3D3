@@ -27,22 +27,22 @@ public class Person {
     private LocalDate birthDate;
 
     @Column(name = "genere")
+    @Enumerated(EnumType.STRING)
     private Genres genre;
 
-    @OneToMany(mappedBy = "participation")
+    @OneToMany(mappedBy = "person")
     private List<Participation> participations = new ArrayList<>();
 
     public Person() {
 
     }
 
-    public Person(String name, String surname, String email, LocalDate birthDate, Genres genre, List<Participation> participations) {
+    public Person(String name, String surname, String email, LocalDate birthDate, Genres genre) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.birthDate = birthDate;
         this.genre = genre;
-        this.participations = participations;
     }
 
     public UUID getId() {
