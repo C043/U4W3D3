@@ -8,7 +8,7 @@ import jakarta.persistence.Id;
 import java.util.UUID;
 
 @Entity
-public class Locations {
+public class Location {
     @Id
     @GeneratedValue
     private UUID id;
@@ -19,11 +19,11 @@ public class Locations {
     @Column(name = "città", nullable = false)
     private String city;
 
-    public Locations() {
+    public Location() {
 
     }
 
-    public Locations(String name, String city) {
+    public Location(String name, String city) {
         this.name = name;
         this.city = city;
     }
