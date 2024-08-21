@@ -3,6 +3,7 @@ package entities;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Table(name = "Eventi")
@@ -10,7 +11,7 @@ public class Event {
     @Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
-    private long id;
+    private UUID id;
 
     @Column(name = "titolo", nullable = false)
     private String title;
@@ -47,7 +48,7 @@ public class Event {
         this.title = title;
     }
 
-    public long getId() {
+    public UUID getId() {
         return id;
     }
 
