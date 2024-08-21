@@ -28,6 +28,9 @@ public class Event {
 
     @Column(name = "max_partecipanti", nullable = false)
     private int maxParticipants;
+    @ManyToOne
+    @JoinColumn(name = "location_id")
+    private Locations location;
 
     public Event() {
     }
@@ -50,6 +53,14 @@ public class Event {
 
     public UUID getId() {
         return id;
+    }
+
+    public Locations getLocation() {
+        return location;
+    }
+
+    public void setLocation(Locations location) {
+        this.location = location;
     }
 
     public LocalDate getEventDate() {

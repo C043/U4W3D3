@@ -9,7 +9,7 @@ import jakarta.persistence.Persistence;
 import java.time.LocalDate;
 
 public class App {
-    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("U4W3D2");
+    private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("U4W3D3");
 
     public static void main(String[] args) {
         EntityManager em = emf.createEntityManager();
