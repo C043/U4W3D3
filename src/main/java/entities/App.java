@@ -34,7 +34,8 @@ public class App {
         /*Participation aldoParticipation = new Participation(ped.findById(UUID.fromString("d961a23c-b69a-442a-87b5-0ed08dc913be")), ed.getEventById(UUID.fromString("6ac3e518-1673-4932-8148-a0092d198c8b")), ParticipationState.CONFERMATA);
         pd.save(aldoParticipation);*/
 
-        System.out.println(ped.findById(UUID.fromString("d961a23c-b69a-442a-87b5-0ed08dc913be")).getParticipations());
+        System.out.println(pd.findById(UUID.fromString("a1cbfdd2-b13d-4ce8-b57a-dc9284b33f6e")).getPerson());
+
         /*try {
             System.out.println(ed.getEventById(poveroPiero.getId()));
         } catch (NotFoundException e) {
